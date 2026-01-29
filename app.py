@@ -1,5 +1,10 @@
 """Streamlit dashboard: merged freight metrics and visualizations."""
 
+import warnings
+
+# Suppress openpyxl warnings about unsupported extensions (conditional formatting, data validation)
+warnings.filterwarnings("ignore", message=".*extension is not supported and will be removed.*")
+
 from pathlib import Path
 
 import pandas as pd
@@ -112,7 +117,7 @@ def main():
         show_cols = order_cols + other_cols
         st.dataframe(
             filtered[show_cols].head(500),
-            use_container_width=True,
+            width="stretch",
             hide_index=True,
         )
         st.caption("Exibindo até 500 linhas. Use os filtros na barra lateral para refinar.")
