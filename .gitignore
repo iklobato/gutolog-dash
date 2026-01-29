@@ -1,0 +1,22 @@
+# Excel data (do not commit)
+*.xlsx
+*.xlsm
+*.xls
+
+# Virtual env and caches
+.venv
+__pycache__/
+*.pyc
+.pytest_cache
+.mypy_cache
+.ruff_cache
+
+# IDE and OS
+.cursor
+.git
+*.swp
+*.swo
+.DS_Store
+
+# Docker (optional; uncomment if you don't want to track local overrides)
+# docker-compose.override.yml

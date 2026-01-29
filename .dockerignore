@@ -1,0 +1,25 @@
+# Virtual env and caches
+.venv
+__pycache__
+*.pyc
+.pytest_cache
+.mypy_cache
+.ruff_cache
+
+# Git and IDE
+.git
+.gitignore
+.dockerignore
+.cursor
+*.swp
+*.swo
+
+# Docker
+Dockerfile
+compose.yaml
+docker-compose*.yml
+.docker
+
+# Docs and misc (optional; keep if you want them in image)
+# README.md
+# *.md

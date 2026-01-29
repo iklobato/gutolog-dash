@@ -1,0 +1,15 @@
+# Docker Compose for freight dashboard
+# Usage: docker compose up
+# Then open http://localhost:8501 (or run: docker compose up -d && open http://localhost:8501)
+
+services:
+  app:
+    build: .
+    ports:
+      - "8501:8501"
+    restart: unless-stopped
+    # Optional: mount Excel files from host so you can update without rebuild
+    # volumes:
+    #   - ./BASE_VALORES.xlsx:/app/BASE_VALORES.xlsx
+    #   - "./CALCULO FRETE PESO.xlsx:/app/CALCULO FRETE PESO.xlsx"
+    #   - ./COTAÇÃO_LOTAÇÃO.xlsm:/app/COTAÇÃO_LOTAÇÃO.xlsm
